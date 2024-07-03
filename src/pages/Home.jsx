@@ -32,10 +32,14 @@ const Home = () => {
             loading?
             (<Spinner/>):
             posts.length>0?
-            (posts.map((post)=>{
-                return <Product key={post.id} post={post}/>
-            })):
-            (<div>No Post Fount</div>)
+            (<div className='grid grid-cols-4 max-w-4xl mx-auto space-y-10 p-2'>
+                {
+                posts.map((post)=>(
+                 <Product key={post.id} post={post}/>
+                ))
+                }
+            </div>):
+            (<div className='flex justify-center items-center'>No Post Fount</div>)
         }
     </div>
   )
