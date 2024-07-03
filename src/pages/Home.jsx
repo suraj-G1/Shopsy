@@ -8,10 +8,11 @@ const Home = () => {
     const [posts,setPosts] = useState([]);
     async function fetchProductData(){
         setLoading(true);
-
         try{
             const result = await fetch(API_URL);
+            
             const data = await result.json();
+            console.log(data);
             setPosts(data);
         }
         catch(err){
@@ -28,10 +29,11 @@ const Home = () => {
   return (
     <div>
         {
-            loading?<Spinner/>:
+            loading?
+            (<Spinner/>):
             posts.length>0?
             (posts.map((post)=>{
-                <Product key={post.id} post={post}/>
+                return <Product key={post.id} post={post}/>
             })):
             (<div>No Post Fount</div>)
         }
