@@ -4,7 +4,7 @@ import Cart from './pages/Cart'
 import {Routes,Route} from 'react-router-dom'
 const App = () => {
   return(
-    <div>
+    <div className='flex flex-col'>
       <div className='bg-slate-900'>
         <Navbar/>
       </div>

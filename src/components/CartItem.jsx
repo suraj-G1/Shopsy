@@ -11,12 +11,12 @@ const CartItem = ({item , itemIndex}) => {
     }
   return (
     <div>
-        <div className='flex justify-between gap-12 max-w-[480px]'>
-            <div className='w-full h-[200px]'>
-                <img src={item.image} className='w-[180px] h-full'/>
+        <div className="flex justify-between items-center hover:scale-110 transition duration-300 
+    ease-in shadow-2xl gap-3 py-4 px-1 mt-10 ml-5 rounded-xl">
+            <div className='w-[220px] h-[200px]'>
+                <img src={item.image} className='w-[180px] h-[180px]'/>
             </div>
-
-            <div className='flex flex-col gap-4'>
+            <div className='flex flex-col gap-4 text-left max-w-[200px]'>
                 <h1 className="text-gray-700 font-semibold text-lg text-left mt-1">{item.title}</h1>
                 <p className='text-gray-500 text-[12px] font-semibold'>{item.description.split(" ").slice(0, 15).join(" ") + "..."}</p>
 
