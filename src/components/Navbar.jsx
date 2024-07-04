@@ -8,10 +8,19 @@ const Navbar = () => {
     <div>
       <div className="flex items-center max-w-4xl mx-auto justify-between">
         <NavLink to="/">
-          <div>
+          <div className="flex justify-center items-center gap-2">
             <img src='../android-chrome-192x192.png' className="h-14" />
+            <span className="text-3xl text-white font-bold capitalize">Shopsy</span>
           </div>
         </NavLink>
+
+        <div>
+          <ul className="flex gap-12 text-white cursor-pointer">
+            <li>Shop Now</li>
+            <li>Where To buy</li>
+            <li>About Us</li>
+          </ul>
+        </div>
 
         <div className="flex items-center font-medium text-slate-100 mr-5 space-x-6">
           <NavLink to="/">
